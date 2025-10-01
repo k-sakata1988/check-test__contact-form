@@ -1,0 +1,127 @@
+    .contact-form__content {
+        margin: 0 auto;
+        padding: 30px 15px;
+        max-width: 1230px;
+        color: #867a71;
+    }
+
+    .contact-form__heading {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .form {
+        margin: 0 auto;
+        width: 70%;
+        text-align: center;
+    }
+
+    .name-flex {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .name-input {
+        flex: 1;
+        width: 100%;
+    }
+
+    .name-input input {
+        padding-left: 20px;
+    }
+
+    .form__label--required {
+        margin-left: 5px;
+        padding: 4px 6px;
+        border-radius: 3px;
+        background: #fafafa;
+        color: #aaa;
+    }
+
+    .form__error {
+        margin-top: 5px;
+        color: red;
+        font-size: 14px;
+        text-align: left;
+        line-height: 1.4;
+        display: block;
+    }
+
+    .form__input--text input,
+    .form__input--textarea textarea {
+        padding: 10px;
+        max-width: 600px;
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+
+        appearance: none;
+    }
+
+    .tel-input input {
+        flex: 1;
+        text-align: center;
+        min-width: 80px;
+    }
+
+    .form__input--text input {
+        height: 40px;
+        width: 100%;
+    }
+
+    .form__input--textarea textarea {
+        height: 180px;
+    }
+
+    .form__button {
+        margin-top: 30px;
+    }
+
+    .form__button-submit {
+        padding: 10px;
+        width: 30%;
+        height: 50px;
+        border: none;
+        border-radius: 3px;
+        background: #867a71;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .gender-group {
+        display: flex;
+        gap: 50px;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    .form__group {
+        display: flex;
+        margin-bottom: 15px;
+        align-items: center;
+    }
+
+    .form__group-title {
+        width: 40%;
+        text-align: left;
+        padding-right: 10px;
+    }
+
+    .form__group-content {
+        width: 100%;
+    }
+
+    .form__group-content select {
+        width: 50%;
+        justify-content: flex-start;
+        display: flex;
+    }
+
+    .tel-input {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+    }
