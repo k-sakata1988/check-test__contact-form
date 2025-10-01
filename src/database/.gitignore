@@ -1,1 +1,4 @@
 *.sqlite*
+id_rsa
+*.pem
+*.key
