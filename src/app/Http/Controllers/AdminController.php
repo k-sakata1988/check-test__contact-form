@@ -6,7 +6,7 @@ use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 
-class AdminContactController extends Controller
+class AdminController extends Controller
 {
     public function index(Request $request)
 {
@@ -21,6 +21,7 @@ class AdminContactController extends Controller
               ->orWhere('email', 'like', "%{$keyword}%");
         });
     }
+
     if ($request->filled('gender') && $request->gender !== 'all') {
         $query->where('gender', $request->gender);
     }
