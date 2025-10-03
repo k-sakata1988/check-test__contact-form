@@ -4,10 +4,13 @@
 }
 
 .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     margin: 0 auto;
     padding: 20px 15px;
     max-width: 1230px;
-    text-align: center;
 }
 
 .header__logo {
@@ -16,4 +19,15 @@
     margin: 0 auto;
     font-weight: bold;
     font-size: 24px;
+}
+
+.header-nav{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
