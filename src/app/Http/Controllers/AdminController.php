@@ -32,7 +32,7 @@ class AdminController extends Controller
         $query->whereDate('created_at', $request->date);
     }
 
-    $contacts = $query->paginate(10);
+    $contacts = $query->paginate(7);
 
     return view('admin.admin', compact('contacts'));
 }

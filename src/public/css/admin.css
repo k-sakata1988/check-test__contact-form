@@ -1,0 +1,86 @@
+.admin__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+    color: #867a71;
+}
+
+.admin__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.search-form {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+    display: flex;
+}
+
+.search-form__item-input {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.search-form__item-input input,
+.search-form__item-input select,
+.search-form__input--text input {
+    flex: 1;
+    min-width: 120px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+.extra__function {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* ページネーション全体 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* ページ番号・リンク全般 */
+.pagination a,
+.pagination span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #867a71;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* ホバー時 */
+.pagination a:hover {
+    background-color: #f1ece7;
+    color: #000;
+}
+
+/* 現在ページ */
+.pagination .active {
+    background-color: #867a71;
+    color: #fff;
+    border-color: #867a71;
+}
+
+/* 前・次ボタン */
+.pagination li:first-child a,
+.pagination li:last-child a {
+    width: 40px;
+    font-weight: bold;
+}
