@@ -92,7 +92,7 @@
     </div>
 </div>
 
-<div id="detailModal" class="modal" style="display:none;">
+<div id="detailModal" class="modal">
     <div class="modal__content">
         <span class="modal__close">×</span>
         <div id="modal-body" class="modal__body"></div>
@@ -111,16 +111,34 @@ document.querySelectorAll('.show-detail').forEach(btn => {
         fetch('/admin/contacts/' + id)
         .then(res => res.json())
         .then(data => {
+            let genderText = '';
+            switch (data.gender) {
+                case 1:
+                case "1":
+                    genderText = '男性';
+                    break;
+                case 2:
+                case "2":
+                    genderText = '女性';
+                    break;
+                case 3:
+                case "3":
+                    genderText = 'その他';
+                    break;
+                default:
+                    genderText = '未設定';
+            }
             document.getElementById('modal-body').innerHTML = `
             <p>お名前: ${data.last_name} ${data.first_name}</p>
-            <p>性別: ${data.gender}</p>
+            <p>性別: ${genderText}</p>
             <p>メールアドレス: ${data.email}</p>
             <p>住所: ${data.address}</p>
             <p>建物名: ${data.building}</p>
             <p>お問い合わせの種類: ${data.category_id}</p>
             <p>お問い合わせ内容: ${data.detail}</p>
             `;
-            document.getElementById('detailModal').style.display = 'block';
+            // document.getElementById('detailModal').style.display = 'block';
+            document.getElementById('detailModal').classList.add('show');
 
             document.querySelector('.delete-Form').action = `/admin/contacts/${id}`;
         });
@@ -128,7 +146,8 @@ document.querySelectorAll('.show-detail').forEach(btn => {
 });
 
 document.querySelector('.modal__close').addEventListener('click', function(){
-    document.getElementById('detailModal').style.display = 'none';
+    // document.getElementById('detailModal').style.display = 'none';
+    document.getElementById('detailModal').classList.remove('show');
 });
 </script>
 @endsection
