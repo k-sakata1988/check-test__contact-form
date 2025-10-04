@@ -54,12 +54,20 @@ class AdminController extends Controller
     {
         $query = Contact::query();
 
-        if ($request->filled('name')) {
-            $name = $request->input('name');
-            $query->where(function($q) use ($name) {
-                $q->where('first_name', 'like', "%{$name}%")
-                  ->orWhere('last_name', 'like', "%{$name}%")
-                  ->orWhereRaw("CONCAT(last_name, first_name) like ?", ["%{$name}%"]);
+        // if ($request->filled('name')) {
+        //     $name = $request->input('name');
+        //     $query->where(function($q) use ($name) {
+        //         $q->where('first_name', 'like', "%{$name}%")
+        //           ->orWhere('last_name', 'like', "%{$name}%")
+        //           ->orWhereRaw("CONCAT(last_name, first_name) like ?", ["%{$name}%"]);
+        //     });
+        // }
+        if ($request->filled('keyword')) {
+            $keyword = $request->input('keyword');
+            $query->where(function($q) use ($keyword) {
+                $q->where('first_name', 'like', "%{$keyword}%")
+                  ->orWhere('last_name', 'like', "%{$keyword}%")
+                  ->orWhereRaw("CONCAT(last_name, first_name) like ?", ["%{$keyword}%"]);
             });
         }
         if ($request->filled('email')) {
@@ -77,12 +85,24 @@ class AdminController extends Controller
 
         $contacts = $query->get();
 
+        $genders = [1 => '男性', 2 => '女性', 3 => 'その他'];
+
         $csvData = [];
         $csvData[] = ['ID', '姓', '名', '性別', 'メール', '住所', '建物', 'お問い合わせ種類', '内容', '登録日時'];
         foreach ($contacts as $c) {
             $csvData[] = [
-                $c->id, $c->last_name, $c->first_name, $c->gender, $c->email,
-                $c->address, $c->building, $c->category_id, $c->detail, $c->created_at
+                $c->id,
+                $c->last_name,
+                $c->first_name,
+                // $c->gender,
+                $genders[$c->gender] ?? '未設定',
+                $c->email,
+                $c->address,
+                $c->building,
+                // $c->category_id,
+                $c->category->content ?? '',
+                $c->detail,
+                $c->created_at
             ];
         }
 
