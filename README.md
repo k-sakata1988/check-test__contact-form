@@ -21,7 +21,7 @@ Laravel環境構築
 - Docker 28.3.2 /Docker Compose 3.8
 
 ## ER図
-
+![ER図](./er.drawio.png)
 
 ## URL
 - 開発環境: http://localhost/
