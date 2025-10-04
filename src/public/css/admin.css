@@ -12,15 +12,24 @@
 
 .search-form {
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
     text-align: center;
     display: flex;
+    gap:20px;
+    align-items: stretch;
+}
+
+.search-form__inner{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .search-form__item-input {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    gap: 20px;
+    flex-wrap: no wrap;
     align-items: center;
 }
 
@@ -31,25 +40,57 @@
     min-width: 120px;
     padding: 5px 10px;
     box-sizing: border-box;
+    height:40px;
+}
+.search-form__button a,.search-form__button button {
+    display: inline-block;
+    padding: 5px 16px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    text-decoration: none;
+    border: 1px solid #867a71;
+    border-radius: 1px;
+    background-color: #f1ece7;
+    color: #867a71;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-form__button a:hover {
+    background-color: #e0d8cf;
 }
 
 .extra__function {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 15px;
+    margin: 15px auto;
+    width: 80%;
 }
 
-/* ページネーション全体 */
+.search-form__button-export{
+    display: inline-block;
+    padding: 5px 16px;
+    justify-content: center;
+    height: 32px;
+    text-decoration: none;
+    border: 1px solid #867a71;
+    border-radius: 1px;
+    background-color: #f1ece7;
+    color: #867a71;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
 .pagination {
     display: flex;
     justify-content: center;
     gap: 5px;
-    margin-top: 20px;
     font-size: 14px;
+    list-style: none;
 }
 
-/* ページ番号・リンク全般 */
 .pagination a,
 .pagination span {
     display: inline-flex;
@@ -65,22 +106,134 @@
     transition: background-color 0.2s, color 0.2s;
 }
 
-/* ホバー時 */
 .pagination a:hover {
     background-color: #f1ece7;
     color: #000;
 }
 
-/* 現在ページ */
-.pagination .active {
+.pagination .active span {
     background-color: #867a71;
     color: #fff;
     border-color: #867a71;
 }
 
-/* 前・次ボタン */
 .pagination li:first-child a,
 .pagination li:last-child a {
     width: 40px;
     font-weight: bold;
+}
+
+.contact-table{
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid #ddd;
+}
+
+.contact-table__inner{
+    width: 100%;
+}
+
+.contact-table__header{
+    background-color: #867a71;
+    color: #fff;
+    height: 40px;
+}
+
+.contact-table__row td{
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+    margin:0 auto;
+    padding: 10px 10px;
+    height: 40px;
+}
+
+.header-nav__button{
+    display: inline-block;
+    padding: 5px 16px;
+    justify-content: center;
+    height: 32px;
+    text-decoration: none;
+    border: 1px solid #867a71;
+    border-radius: 1px;
+    background-color: #f1ece7;
+    color: #867a71;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+} */
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+/* .modal__content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+} */
+.modal__content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 70%;
+    max-width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.modal__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* .modal__delete {
+    background-color: #ff4d4f;
+    color: white;
+    justify-content: center;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: center;
+} */
+.modal__delete {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

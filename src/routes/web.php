@@ -28,7 +28,7 @@ Route::get('/contacts/edit', [ContactController::class, 'edit']);
 // Route::get('/login',[AuthController::class,'index']);
 Route::prefix('admin')->name('admin.')->group(function() {
     Route::get('/', [AdminController::class, 'index'])->name('contacts.index');
-    Route::get('/contacts/export', [AdminController::class, 'export'])->name('contacts.export'); // ←これが必須
+    Route::get('/contacts/export', [AdminController::class, 'export'])->name('contacts.export');
     Route::get('/contacts/{id}', [AdminController::class, 'show'])->name('contacts.show');
     Route::delete('/contacts/{id}', [AdminController::class, 'destroy'])->name('contacts.destroy');
 });
