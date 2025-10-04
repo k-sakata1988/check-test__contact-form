@@ -2,7 +2,7 @@
 
 ## 環境構築
 Dockerビルド
-1. git clone git@github.com:Estra-Coachtech/laravel-docker-template.git
+1. git clone @github.com:k-sakata1988/check-test__contact-form.git
 2. docker-compose up -d --build
 
 Laravel環境構築
