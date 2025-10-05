@@ -3,6 +3,7 @@
     padding: 30px 15px;
     max-width: 1230px;
     background-color: #f1ece7;
+    color: #827b70;
 }
 
 .login-form__heading {
@@ -42,7 +43,8 @@
     height: 40px;
     border: 1px solid #ddd;
     border-radius: 3px;
-
+    color: #d2d1cf;
+    background-color: #f5f5f5;
     appearance: none;
 }
 
@@ -56,7 +58,7 @@
     height: 50px;
     border: none;
     border-radius: 3px;
-    background: #000;
+    background: #827668;
     color: #fff;
     cursor: pointer;
 }
@@ -72,10 +74,10 @@
     justify-content: center;
     height: 32px;
     text-decoration: none;
-    border: 1px solid #867a71;
+    border: 1px solid #d6c1af;
     border-radius: 1px;
     background-color: #f1ece7;
-    color: #867a71;
+    color: #d6c1af;
     cursor: pointer;
     transition: background-color 0.2s;
     }
