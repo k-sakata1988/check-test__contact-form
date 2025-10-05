@@ -57,3 +57,44 @@
     background-color: #6f6559;
     transform: translateY(-1px);
 }
+
+@media (max-width: 1024px) {
+    .thanks__inner {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .thanks__heading {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 10px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .thanks__inner {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .thanks__heading {
+        font-size: 18px;
+    }
+
+    .thanks__content::before {
+        font-size: clamp(50px, 25vw, 150px);
+    }
+
+    .btn {
+        width: 80%;
+        padding: 12px 0;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .thanks__button {
+        margin-top: 15px;
+    }
+}

@@ -1,7 +1,8 @@
 .register-form__content {
     margin: 0 auto;
     padding: 30px 15px;
-    max-width: 1230px;
+    width: 100%;
+    height: 100vh;
     background-color: #f1ece7;
     color: #827b70;
 }
@@ -22,6 +23,47 @@
     border-radius: 5px;
     max-width: 400px;
     margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .form__content {
+        max-width: 350px;
+        padding: 25px;
+    }
+
+    .form__input--text input {
+        min-width: 250px;
+    }
+
+    .form__button-submit {
+        width: 50%;
+        height: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .register-form__content {
+        padding: 20px 10px;
+    }
+
+    .form__content {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .form__input--text input {
+        min-width: auto;
+    }
+
+    .form__button-submit {
+        width: 70%;
+        height: 45px;
+    }
+
+    .login__button-submit {
+        width: 70%;
+        height: 40px;
+    }
 }
 
 .form__group {

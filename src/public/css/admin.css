@@ -280,3 +280,101 @@
 .modal-table td{
     width: 70%;
 }
+
+@media (max-width: 1024px) {
+    .admin__content {
+        width: 95%;
+        padding: 20px 10px;
+    }
+
+    .search-form {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+
+    .search-form__inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-form__item-input {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .search-form__item-input input,
+    .search-form__item-input select,
+    .search-form__input--text input {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .extra__function {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .contact-table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .modal__content {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin__content {
+        padding: 15px 5px;
+    }
+
+    .search-form {
+        gap: 10px;
+    }
+
+    .search-form__inner {
+        gap: 10px;
+    }
+
+    .search-form__item-input {
+        gap: 8px;
+    }
+
+    .search-form__button a,
+    .search-form__button button,
+    .search-form__button-export,
+    .show-detail,
+    .header-nav__button {
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+        font-size: 14px;
+    }
+
+    .contact-table {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .contact-table__row td {
+        padding: 6px 5px;
+        height: auto;
+    }
+
+    .modal__content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .modal-table th,
+    .modal-table td {
+        width: auto;
+        display: block;
+        padding: 5px 10px;
+    }
+}
