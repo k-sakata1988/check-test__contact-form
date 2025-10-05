@@ -141,7 +141,7 @@ document.querySelectorAll('.show-detail').forEach(btn => {
                         categoryText = '商品トラブル';
                 case 4:
                     case "4":
-                         categoryText = 'ショップへのお問い合わせ';
+                        categoryText = 'ショップへのお問い合わせ';
                 case 5:
                     case "5":
                         categoryText = 'その他';

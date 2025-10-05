@@ -42,7 +42,7 @@
     box-sizing: border-box;
     height:40px;
 }
-.search-form__button a,.search-form__button button {
+.search-form__button a,.search-form__button button,.show-detail {
     display: inline-block;
     padding: 5px 16px;
     justify-content: center;
@@ -242,7 +242,7 @@
     background-color: #ff4d4f;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 1px;
     cursor: pointer;
 }
 
