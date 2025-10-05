@@ -114,28 +114,68 @@ document.querySelectorAll('.show-detail').forEach(btn => {
             let genderText = '';
             switch (data.gender) {
                 case 1:
-                case "1":
-                    genderText = '男性';
-                    break;
+                    case "1":
+                        genderText = '男性';
+                        break;
                 case 2:
-                case "2":
-                    genderText = '女性';
-                    break;
+                    case "2":
+                        genderText = '女性';
+                        break;
                 case 3:
-                case "3":
-                    genderText = 'その他';
-                    break;
+                    case "3":
+                        genderText = 'その他';
+                        break;
                 default:
                     genderText = '未設定';
             }
+            let categoryText = '';
+            switch (data.category_id){
+                case 1:
+                    case "1":
+                        categoryText = '商品のお届けについて';
+                case 2:
+                    case "2":
+                        categoryText = '商品の交換について';
+                case 3:
+                    case "3":
+                        categoryText = '商品トラブル';
+                case 4:
+                    case "4":
+                         categoryText = 'ショップへのお問い合わせ';
+                case 5:
+                    case "5":
+                        categoryText = 'その他';
+            }
             document.getElementById('modal-body').innerHTML = `
-            <p>お名前: ${data.last_name} ${data.first_name}</p>
-            <p>性別: ${genderText}</p>
-            <p>メールアドレス: ${data.email}</p>
-            <p>住所: ${data.address}</p>
-            <p>建物名: ${data.building}</p>
-            <p>お問い合わせの種類: ${data.category_id}</p>
-            <p>お問い合わせ内容: ${data.detail}</p>
+            <table class="modal-table">
+            <tr>
+            <th>お名前</th>
+            <td>${data.last_name} ${data.first_name}</td></tr>
+            <tr>
+            <th>性別</th>
+            <td>${genderText}</td>
+            </tr>
+            <tr>
+            <th>メールアドレス</th>
+            <td>${data.email}</td>
+            </tr>
+            <tr>
+            <th>住所</th>
+            <td>${data.address}</td>
+            </tr>
+            <tr>
+            <th>建物名</th>
+            <td>${data.building}</td>
+            </tr>
+            <tr>
+            <th>お問い合わせの種類</th>
+            <td>${categoryText}</td>
+            </tr>
+            <tr>
+            <th>お問い合わせ内容</th>
+            <td>${data.detail}</td>
+            </tr>
+    </table>
             `;
             // document.getElementById('detailModal').style.display = 'block';
             document.getElementById('detailModal').classList.add('show');
